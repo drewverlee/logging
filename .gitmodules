@@ -1,0 +1,3 @@
+[submodule "tools.logging"]
+	path = tools.logging
+	url = git@github.com:drewverlee/tools.logging.git
