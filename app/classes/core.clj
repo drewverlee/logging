@@ -3,11 +3,13 @@
   (:gen-class))
 
 ;; try any level
-;; (log/log :cat  "hi"  )
-;; that fails, looks like we have to pick a prexisting one. This would be a good place for a clojure spec.
+;; (log/log :cat :a "hi"  )
 
-;; pick one that your sure will work:
-(log/log :debug "debug from build!")
+;; try a well known one
+
+java.lang.Throwable
+
+(log/log :debug "hi")
 
 (defn divide [x y]
   (log/info "dividing" x "by" y)

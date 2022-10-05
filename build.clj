@@ -20,10 +20,11 @@
   (clean nil)
   ;;NOTE the msg "skipping paths" produced by this function isn't a warning and can be ignored.
   (b/write-pom {:class-dir class-dir
+                :version "1"
                 :lib       'logging/logging
                 :basis     basis
                 :src-dirs source-dirs})
-  (b/copy-dir {:src-dirs   (concat source-dirs ["resources"])
+  (b/copy-dir {:src-dirs   source-dirs
                :target-dir class-dir})
   (b/compile-clj {:basis     basis
                   :src-dirs source-dirs
